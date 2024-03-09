@@ -77,10 +77,24 @@ def use_dicionary():
     print(dict1)
 
 def count_bits_set():
-    # input = 
-    pass    
+    input = 23 # 0b1 0111
+    temp = input
+    bin_str = ''
+    ones_count = 0
+    while temp > 0:
+        curr_bit = temp%2
+        print(curr_bit)
+        if curr_bit == 1:
+            ones_count += 1
 
+        bin_str = str(curr_bit) + bin_str
+        temp = int(temp/2)
+
+    print(f'0b_{bin_str}')
+    print(f'1s count = {ones_count}')
+    
 def test():
     # use_tuple_and_list()
     # use_dicionary()
-    use_arrays_strings()
+    # use_arrays_strings()
+    count_bits_set()
