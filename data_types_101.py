@@ -1,6 +1,38 @@
 # list type, tuple
 # arrays, strings, bit manipulation
 
+import array as arr
+
+def use_arrays_strings():
+    # arr1 = [1 2 3 3]
+    arr1 = arr.array('i', [1, 2, 3, 4])
+    print('arr1 before modifications:\t', arr1)
+
+    arr1.append(5)
+    arr1.insert(0,100)
+    print('new arr1 before removals: \t', arr1)
+
+    arr1.pop(1)
+    arr1.remove(2)
+    print('arr1 after modifications: \t', arr1)
+
+    print('\n arr1 doubled: \t', arr1)
+    for elem in arr1:
+        print(2*elem, end= ', ')
+
+    # strings
+    str1 = str('1')
+    str2 = str('2')
+    new_str = str1 + str2
+    print('\n new_str is : ',new_str)
+
+    sum = 0
+    for c in new_str:
+        curr_num = int(c)
+        sum = sum + curr_num
+
+    print('sum of nums in new_str is : ',sum)
+
 def use_tuple_and_list():
     tuple1 = (1,2,'a')
     # tuples are non mutable
@@ -34,7 +66,6 @@ def use_dicionary():
     dict1[10] = 101
     dict1['city'] = 'San Diego'
 
-
     print(f'dict1 items before popping:')
     for key in dict1:
         print(f'k:{key},\t v:{dict1[key]}')
@@ -45,12 +76,9 @@ def use_dicionary():
     print(f'dict1 items after popping:')
     print(dict1)
 
-import array as arr
-
-def use_arrays_strings():
-    # arr1 = [1 2 3 3]
-    arr1 = arr.array('i', [1, 2, 3, 4])
-
+def count_bits_set():
+    # input = 
+    pass    
 
 def test():
     # use_tuple_and_list()

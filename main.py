@@ -10,6 +10,6 @@ types_101.test()
 # arrays, strings, bit manipulation
 
 # Linked list, stack, queue
+# sorting and searching
 # tree, graphs
 # recursion, dyn prog
-# sorting and searching
