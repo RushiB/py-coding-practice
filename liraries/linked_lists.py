@@ -75,7 +75,7 @@ class doubly_linked_list:
             self.tail = new_node
             print(f'added at tail [v:{self.tail.value}]')
 
-    def traverse_node(self, direction = 'forward'):
+    def traverse_nodes(self, direction = 'forward'):
         print(f'traversiong in {direction} direction')
         if direction == 'forward':
             current_node = self.head
@@ -90,7 +90,7 @@ class doubly_linked_list:
                 current_node = current_node.prev
             print('[STOP]')
 
-    def remove_node(self, value, start_at = 'head'):
+    def remove_node(self, value, start_at = 'head', traverse_direction='forward', custom_msg = ''):
         target_node_found = False
         if start_at == 'head':
             current_node = self.head
@@ -100,13 +100,37 @@ class doubly_linked_list:
         while current_node != None:
             if current_node.value == value:
                 prev_node = current_node.prev
-                if prev_node != None:
+                next_node = current_node.next
+                # removing middle node
+                if prev_node != None and next_node != None:
                     prev_node.next = current_node.next
-                else:
-                    self.head = current_node.next
-                if current_node.next == None:
+                    next_node.prev = prev_node
+                
+                # we are removing head node
+                elif prev_node == None: 
+                    self.head = next_node
+                    # if more than one node, update new head's prev
+                    if self.head != None:
+                        self.head.prev = None
+                        if self.head.next == None:
+                            self.tail = self.head
+                    else:
+                        self.tail = None
+                
+                # we are removing tail node
+                elif next_node == None:
                     self.tail = prev_node
-                print(f'removing node with val xx->{value}<-xx')
+                    if prev_node != None:
+                        self.tail.next = None
+                        if self.tail.prev == None:
+                            self.head = self.tail
+                    else:
+                        self.tail = None
+
+                if custom_msg == '':
+                    print(f'removing node with val xx->{value}<-xx')
+                else:
+                    print(custom_msg)
                 target_node_found = True
                 break
             else:
@@ -118,8 +142,8 @@ class doubly_linked_list:
         
         if target_node_found == False:
             print(f'No node found with value {value}')
-
-        self.traverse_node()
+        else:
+            self.traverse_nodes(traverse_direction)
 
 
 def test_singly_linked_list():
@@ -138,13 +162,13 @@ def test_singly_linked_list():
 def test_doubly_linked_list():
     linked_list1 = doubly_linked_list()
 
-    linked_list1.traverse_node()
+    linked_list1.traverse_nodes()
     linked_list1.add_node(10); linked_list1.add_node(20); 
     linked_list1.add_node(30); linked_list1.add_node(40); 
     linked_list1.add_node(50); linked_list1.add_node(60); 
 
-    linked_list1.traverse_node(direction= 'forward')
-    linked_list1.traverse_node(direction= 'backward')
+    linked_list1.traverse_nodes(direction= 'forward')
+    linked_list1.traverse_nodes(direction= 'backward')
 
     linked_list1.remove_node(10)
     linked_list1.remove_node(40)
