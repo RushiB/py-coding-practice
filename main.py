@@ -6,6 +6,9 @@ import liraries.data_types_101 as types_101
 import liraries.linked_lists as LL
 import liraries.stacks_and_queue as staks_and_ques
 
+# Note: VS code git push
+    # -> Under commit 
+    #   -> Select 'Commit & sync'
 
 def hello_world():
     a = 1; b = 2; c = a + b
@@ -24,10 +27,15 @@ def verified_tests():
     '''
     types_101.test()
 
-# Linked list, stack, queue
-# LL.test_linked_list()
-staks_and_ques.test_data_structure()
+    ''' 
+        Single & double linked Linked lists
+        stack, queue
+    '''
+    LL.test_linked_list()
+    staks_and_ques.test_data_structure()
+
 
 # sorting and searching
 # tree, graphs
 # recursion, dyn prog
+    
