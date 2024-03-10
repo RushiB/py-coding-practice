@@ -1,1 +1,2 @@
-__pycache__/linked_lists.cpython-310.pyc
+__pycache__/*.pyc
+liraries/__pycache__/*.pyc
