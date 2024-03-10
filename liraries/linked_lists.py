@@ -76,7 +76,7 @@ class doubly_linked_list:
             print(f'added at tail [v:{self.tail.value}]')
 
     def traverse_nodes(self, direction = 'forward'):
-        print(f'traversiong in {direction} direction')
+        print(f'(traversing in {direction} direction)')
         if direction == 'forward':
             current_node = self.head
             while current_node != None:
