@@ -1,22 +1,21 @@
-import sys, os
-libs_path = os.path.join(os.getcwd(), 'libraries')
-sys.path.append(libs_path)
+import libraries.data_types_101 as types_101
+import libraries.linked_lists as LL
+import libraries.stacks_and_queue as staks_and_ques
 
-import liraries.data_types_101 as types_101
-import liraries.linked_lists as LL
-import liraries.stacks_and_queue as staks_and_ques
-
-# Note: VS code git push
+''' # Note: VS code git push & Shortcut
     # -> Under commit 
     #   -> Select 'Commit & sync'
     # Shortcut added: commit: Ctrl + g + c
     # Shortcut added: sync: Ctrl + g + s
+'''
 
 def hello_world():
     a = 1; b = 2; c = a + b
     print(f'hello world. c= {c}')
-
-def append_sys_path_dbg():
+def try_append_sys_path_dbg():
+    # note - below append is not needed, can just modules using name of parent folder
+    # eg: import libraries.data_types_101 
+    import sys, os
     cwd = os.getcwd()
     target_path = os.path.join(cwd, 'libraries')
     print(target_path)
@@ -36,8 +35,19 @@ def verified_tests():
     LL.test_linked_list()
     staks_and_ques.test_data_structure()
 
+verified_tests()
 
 # sorting and searching
+    # merge sort
+    # quick sort
+
+    # bubble sort?
+    # radix/bucket sort
+
 # tree, graphs
+    # binary tree - 3 types of traversals
+    # graph search:
+        # DFS, BFS
+
 # recursion, dyn prog
-    
+     

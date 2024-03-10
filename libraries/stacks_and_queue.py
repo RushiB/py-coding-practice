@@ -1,4 +1,4 @@
-import liraries.linked_lists as LL
+import libraries.linked_lists as LL
 
 class stack(LL.doubly_linked_list):
     def __init__(self):
