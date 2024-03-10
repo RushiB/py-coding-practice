@@ -9,6 +9,8 @@ import liraries.stacks_and_queue as staks_and_ques
 # Note: VS code git push
     # -> Under commit 
     #   -> Select 'Commit & sync'
+    # Shortcut added: commit: Ctrl + g + c
+    # Shortcut added: sync: Ctrl + g + s
 
 def hello_world():
     a = 1; b = 2; c = a + b
