@@ -30,6 +30,17 @@ def merge(list1, left_idx, mid_idx, right_idx):
         right_arr.append(list1[j])
         j = j+1
 
+    ### same logic as above but use list slicing
+    # left_arr = list1[left_idx:mid_idx]
+    # if len(left_arr) == 0:
+    #     if mid_idx == right_idx:
+    #         right_idx = right_idx +1
+    #     mid_idx = mid_idx+1
+    #     left_arr = list1[left_idx:mid_idx]
+        
+    # right_arr = list1[mid_idx:right_idx+1]
+    # temp =1
+
     # OR method-2
     # while ((i <= mid_idx)):
     #     left_arr.append(list1[i])
@@ -63,34 +74,3 @@ def merge(list1, left_idx, mid_idx, right_idx):
         main_ref+= 1
     
     return
-
-def test_merge_sort():
-    list1 = [9,8]
-    sort_and_print(list1)
-    list1 = [9,8,7]
-    sort_and_print(list1)
-    list1 = [9,8,7,6]
-    sort_and_print(list1)
-    list1 = [9,8,7,6,5]
-    sort_and_print(list1)
-    list1 = [9,8,7,6,5,4]
-    sort_and_print(list1)
-    list1 = [8,6,4,5,7,9]
-    sort_and_print(list1)
-
-def sort_and_print(list1):
-    merge_sort(list1, 0, len(list1)-1)
-    print(f'sorted list is: {list1}', end=' ')
-    test_sorted_array(list1)
-
-def test_sorted_array(list1): # ascending order
-    passed = 1
-    for i in range(1, len(list1)):
-        if list1[i] > list1[i-1]:
-            continue
-        else:
-            passed = 0
-            break
-    if passed: print('PASSED!')
-    else: print('FAILED!')
-

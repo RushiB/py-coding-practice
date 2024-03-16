@@ -1,7 +1,7 @@
 import libraries.data_types_101 as types_101
 import libraries.linked_lists as LL
 import libraries.stacks_and_queue as staks_and_ques
-import libraries.sorting.merge_sort as merge_sort
+import libraries.sorting.sort_utils as sort_utils
 
 ''' # Note: VS code git push & Shortcut
     # -> Under commit 
@@ -45,7 +45,7 @@ def verified_tests():
 
 # hello_world()
 # verified_tests()
-merge_sort.test_merge_sort()
+sort_utils.test_sort()
 
 
 # sorting and searching
