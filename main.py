@@ -1,6 +1,7 @@
 import libraries.data_types_101 as types_101
 import libraries.linked_lists as LL
 import libraries.stacks_and_queue as staks_and_ques
+import libraries.sorting.merge_sort as merge_sort
 
 ''' # Note: VS code git push & Shortcut
     # -> Under commit 
@@ -9,9 +10,16 @@ import libraries.stacks_and_queue as staks_and_ques
     # Shortcut added: sync: Ctrl + g + s
 '''
 
+global_var = 10
+
 def hello_world():
     a = 1; b = 2; c = a + b
     print(f'hello world. c= {c}')
+    global global_var
+    print('global_var=',global_var)
+    global_var = 2
+    print('global_var=',global_var)
+
 def try_append_sys_path_dbg():
     # note - below append is not needed, can just modules using name of parent folder
     # eg: import libraries.data_types_101 
@@ -35,7 +43,10 @@ def verified_tests():
     LL.test_linked_list()
     staks_and_ques.test_data_structure()
 
-verified_tests()
+# hello_world()
+# verified_tests()
+merge_sort.test_merge_sort()
+
 
 # sorting and searching
     # merge sort
@@ -50,4 +61,3 @@ verified_tests()
         # DFS, BFS
 
 # recursion, dyn prog
-     
