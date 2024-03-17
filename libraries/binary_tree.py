@@ -35,15 +35,20 @@ class binary_tree():
             print('Oh no, tree is empty!')
             return
         else:
+            print('--> Starting In-order Traversal of tree:!')
             current_node = self.root
-            # in-order traversal
+            # Left branch of root node
             if current_node.prev is not None: 
                 self.print_sub_tree(current_node.prev)
             
+            #Root node
             self.print_sub_tree(current_node)
             
+            # Right branch of root node
             if current_node.next is not None: 
                 self.print_sub_tree(current_node.next)
+            
+            print('Traversal completed! <--')
 
 
     def print_sub_tree(self, current_node:tree_node):
@@ -64,8 +69,9 @@ class binary_tree():
 
 
 
-def test_tree():
-    test_set1, test_set2 = 0, 1
+def test_tree(test_set1=0, test_set2 =1) -> binary_tree:
+    test_set1 = 0
+    test_set2 = 1
     if test_set1:
         b_tree = binary_tree()
         b_tree.add_node(5)
@@ -86,3 +92,10 @@ def test_tree():
         b_tree.add_node(52)
         b_tree.add_node(47)
         b_tree.traverse_tree()
+
+    test_print_root(b_tree)
+
+    return b_tree
+
+def test_print_root(b_tree: binary_tree):
+    print(b_tree.root.value)
