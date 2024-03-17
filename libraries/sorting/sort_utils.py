@@ -3,26 +3,32 @@ import libraries.sorting.quick_sort as quick_sort
 
 def test_sort(sort_type = 'merge'):
     # sort_type = 'pivot'
-    list1 = [9,8]
-    sort_and_print(list1, sort_type)
-    list1 = [9,8,7]
-    sort_and_print(list1, sort_type)
-    # return
-    list1 = [9,8,7,6]
-    sort_and_print(list1, sort_type)
-    list1 = [9,8,7,6,5]
-    sort_and_print(list1, sort_type)
-    # return
-    list1 = [9,8,7,6,5,4]
-    sort_and_print(list1, sort_type)
-    list1 = [8,6,4,5,7,9]
-    sort_and_print(list1, sort_type)
-    list1 = [1,2,3,4,5,6]
-    sort_and_print(list1, sort_type)
-    list1 = [5,4,6,1,3,2]
-    sort_and_print(list1, sort_type)
-    list1 = [7,5,5,2,1,6,9,8,4,6,3,5]
-    sort_and_print(list1, sort_type)
+    test_set1, test_set2, test_set3 = 1,0,0
+    if test_set1:
+        list1 = [9,8]
+        sort_and_print(list1, sort_type)
+        list1 = [9,8,7]
+        sort_and_print(list1, sort_type)
+        # return
+    
+    if test_set2:
+        list1 = [9,8,7,6]
+        sort_and_print(list1, sort_type)
+        list1 = [9,8,7,6,5]
+        sort_and_print(list1, sort_type)
+        # return
+    
+    if test_set3:
+        list1 = [9,8,7,6,5,4]
+        sort_and_print(list1, sort_type)
+        list1 = [8,6,4,5,7,9]
+        sort_and_print(list1, sort_type)
+        list1 = [1,2,3,4,5,6]
+        sort_and_print(list1, sort_type)
+        list1 = [5,4,6,1,3,2]
+        sort_and_print(list1, sort_type)
+        list1 = [7,5,5,2,1,6,9,8,4,6,3,5]
+        sort_and_print(list1, sort_type)
 
 def sort_and_print(list1, sort_type):
     if sort_type == 'merge':

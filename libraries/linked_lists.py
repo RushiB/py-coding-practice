@@ -1,8 +1,4 @@
-class my_node:
-    def __init__(self, value):
-        self.value = value
-        self.next =  None
-        self.prev = None # used in doubly linked
+from libraries.data_types_101 import my_node
 
 class singly_linked_list:
     def __init__(self, value = 0):

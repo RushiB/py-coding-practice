@@ -3,6 +3,13 @@
 
 import array as arr
 
+class my_node:
+    def __init__(self, value):
+        self.value = value
+        self.next =  None
+        self.prev = None # used in doubly linked
+
+
 def use_arrays_strings():
     # arr1 = [1 2 3 3]
     arr1 = arr.array('i', [1, 2, 3, 4])

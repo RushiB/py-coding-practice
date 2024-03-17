@@ -1,3 +1,5 @@
 __pycache__/
-liraries/__pycache__
-libraries/sorting/__pycache__
+liraries/__pycache__/
+libraries/sorting/__pycache__/
+# libraries/__pycache__/data_types_101.cpython-310.pyc
+# libraries/__pycache__/linked_lists.cpython-310.pyc

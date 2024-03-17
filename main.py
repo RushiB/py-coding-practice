@@ -2,6 +2,7 @@ import libraries.data_types_101 as types_101
 import libraries.linked_lists as LL
 import libraries.stacks_and_queue as staks_and_ques
 import libraries.sorting.sort_utils as sort_utils
+import libraries.binary_tree as btrees
 
 ''' # Note: VS code git push & Shortcut
     # -> Under commit 
@@ -43,21 +44,16 @@ def verified_tests():
     LL.test_linked_list()
     staks_and_ques.test_data_structure()
 
-# hello_world()
-# verified_tests()
-sort_utils.test_sort()
+    sort_utils.test_sort()
 
-
-# sorting and searching
-    # merge sort
-    # quick sort
-
-    # bubble sort?
-    # radix/bucket sort
+btrees.test_tree()
 
 # tree, graphs
-    # binary tree - 3 types of traversals
+    # binary tree - (3 types of traversals)
     # graph search:
         # DFS, BFS
+
+# sort_utils.test_sort() #TODO: #1 radix , may be => #4 bucket sort
+
 
 # recursion, dyn prog
