@@ -59,7 +59,7 @@ search_algos_lib.test_search()
         # DFS, BFS
 
         # // get height, # of leaves (i.e. no children)
-        # // update traversal func to print same level nodes in one line - possible? TBD
+        # // update traversal func to print same level nodes in one line
         # // for sorting~? TBD
         #     // extract min - remove min and replace with last bottom right most and bubble up
         #     // insert - add at

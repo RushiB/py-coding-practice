@@ -69,7 +69,7 @@ class binary_tree():
 
 
 
-def test_tree(test_set1=0, test_set2 =1) -> binary_tree:
+def test_tree(test_set1=0, test_set2 =1, traverse_tree = 1) -> binary_tree:
     test_set1 = 0
     test_set2 = 1
     if test_set1:
@@ -77,7 +77,8 @@ def test_tree(test_set1=0, test_set2 =1) -> binary_tree:
         b_tree.add_node(5)
         b_tree.add_node(12)
         b_tree.add_node(1)
-        b_tree.traverse_tree()
+        if traverse_tree:
+            b_tree.traverse_tree()
     
     if test_set2:
         b_tree = binary_tree()
@@ -91,11 +92,8 @@ def test_tree(test_set1=0, test_set2 =1) -> binary_tree:
         b_tree.add_node(58)
         b_tree.add_node(52)
         b_tree.add_node(47)
-        b_tree.traverse_tree()
 
-    test_print_root(b_tree)
+        if traverse_tree:
+            b_tree.traverse_tree()
 
     return b_tree
-
-def test_print_root(b_tree: binary_tree):
-    print(b_tree.root.value)
