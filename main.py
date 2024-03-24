@@ -4,6 +4,7 @@ import libraries.stacks_and_queue as staks_and_ques
 import libraries.sorting.sort_utils as sort_utils
 import libraries.binary_tree as btrees
 import libraries.bfs_dfs as search_algos_lib
+import libraries.dynamic_programming as dyn_prog
 
 ''' # Note: VS code git push & Shortcut
     # -> Under commit 
@@ -51,18 +52,28 @@ def verified_tests():
     ### In order traversal of binary tree
     btrees.test_tree()
 
-search_algos_lib.test_search()
+    # graph search:
+    # DFS, BFS
+    search_algos_lib.test_search()
+
+
+### In order traversal of binary tree
+# TODO - test repeated call works or not
+# btrees.test_tree()
+
+dyn_prog.test_func()
 
 
 # tree, graphs
-    # graph search:
-        # DFS, BFS
+# TODO
+# update traversals & searches to work for repeated calls
+#   - reset visited flags
 
-        # // get height, # of leaves (i.e. no children)
-        # // update traversal func to print same level nodes in one line
-        # // for sorting~? TBD
-        #     // extract min - remove min and replace with last bottom right most and bubble up
-        #     // insert - add at
+    # // get height, # of leaves (i.e. no children)
+    # // update traversal func to print same level nodes in one line
+    # // for sorting~? TBD
+    #     // extract min - remove min and replace with last bottom right most and bubble up
+    #     // insert - add at
 
 # sort_utils.test_sort() #TODO: #1 radix , may be => #4 bucket sort
 
